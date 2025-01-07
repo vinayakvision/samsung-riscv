@@ -13,7 +13,7 @@ GitHub Profile: Samratvinayak
 
 LinkedIN Profile: Samratvinayak
 
-#Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
+# Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
 
 ## C Language based LAB
 ## C and RISC-V Based Labs
@@ -85,7 +85,7 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
   /main
 ```
 10. Use /main in the terminal to locate the main function in the assembly output.
-![4](https://github.com/user-attachments/assets/abbb078b-bee3-452d-9e04-0f0d61ba42bf)
+![4]([https://github.com/user-attachments/assets/abbb078b-bee3-452d-9e04-0f0d61ba42bf)
 
 ### Explanation of Key Commands and Options: 
 1. -mabi=lp64: Specifies the Application Binary Interface (ABI) for 64-bit integers, pointers, and long data types, suitable for 64-bit RISC-V architecture.
