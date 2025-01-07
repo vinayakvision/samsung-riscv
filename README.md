@@ -39,7 +39,7 @@ This repository demonstrates the processes involved in compiling C programs and 
  
  ## Compilation and execution complete.
  
-![2]([https://github.com/user-attachments/assets/5712cf49-d372-467e-9ace-425a3741b7b4)
+![2](https://github.com/user-attachments/assets/5712cf49-d372-467e-9ace-425a3741b7b4)
 ### RISC-V Based Lab
 
 #### Steps to Compile Using RISC-V GCC Compiler:
