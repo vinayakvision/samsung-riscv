@@ -3,7 +3,7 @@ The program focuses on the RISC-V architecture and leverages open-source tools t
 
 # Basic Details
 
-Name: Vinayak venkappa pujeri
+Name: Vinayak Venkappa Pujeri
 
 College: Vidyavardhaka College of Engineering
 
