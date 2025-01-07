@@ -13,16 +13,16 @@ GitHub Profile: Samratvinayak
 
 LinkedIN Profile: Samratvinayak
 
-Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
+#Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
 
-# C Language based LAB
-# C and RISC-V Based Labs
+## C Language based LAB
+## C and RISC-V Based Labs
 
 This repository demonstrates the processes involved in compiling C programs and generating assembly code using both a standard GCC compiler and a RISC-V GCC compiler. It includes comprehensive steps and explanations to guide users through each stage of the compilation and debugging workflow.
 
-## C Language-Based Lab
+### C Language-Based Lab
 
-### Steps to Compile a .c File on Your Machine:
+#### Steps to Compile a .c File on Your Machine:
 
 1. Open the bash terminal and navigate to the directory where you want to create your file.
 2. Use the following command to create and edit a new .c file:
@@ -30,19 +30,19 @@ This repository demonstrates the processes involved in compiling C programs and 
    leafpad sum1ton.c
 
 
-### Steps to Compile a .c File on our Machine:
+#### Steps to Compile a .c File on our Machine:
  ```sh
  gcc sum1ton.c
  ./a.out
 ```
 
  
- # Compilation and execution complete.
+ ## Compilation and execution complete.
  
 ![2](https://github.com/user-attachments/assets/5712cf49-d372-467e-9ace-425a3741b7b4)
-## RISC-V Based Lab
+### RISC-V Based Lab
 
-### Steps to Compile Using RISC-V GCC Compiler:
+#### Steps to Compile Using RISC-V GCC Compiler:
 1. Ensure the RISC-V GCC compiler is installed and accessible on your system.
 2. Verify the .c file contents using the cat command:
    ```sh
