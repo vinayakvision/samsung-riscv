@@ -30,10 +30,13 @@ This repository demonstrates the processes involved in compiling C programs and 
    leafpad sum1ton.c
 
 
-### Steps to Compile a .c File on Your Machine:
- sh
+### Steps to Compile a .c File on our Machine:
+ ```sh
  gcc sum1ton.c
  ./a.out
+```
+
+ 
  # Compilation and execution complete.
  
 ![2](https://github.com/user-attachments/assets/5712cf49-d372-467e-9ace-425a3741b7b4)
@@ -42,39 +45,45 @@ This repository demonstrates the processes involved in compiling C programs and 
 ### Steps to Compile Using RISC-V GCC Compiler:
 1. Ensure the RISC-V GCC compiler is installed and accessible on your system.
 2. Verify the .c file contents using the cat command:
- sh
-cat sum1ton.c
+   ```sh
+   cat sum1ton.c
+
 
 3. Compile the C program for RISC-V architecture using 01 option:
- sh
+ ```sh
 riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-
+```
 4. Disassemble the object file to view its assembly code using:
- sh
+ ```sh
 riscv64-unknown-elf-objdump -d sum1ton.o
-
+```
 5.minimize the assembly by using following code:
-sh
+```sh
 riscv64-unknown-elf-objdump -d sum1ton.o | less
+```
  a)we extract main function's assembly code by using:
-   /main
-
+   ```sh
+/main
+```
 6. Use /main in the terminal to locate the main function in the assembly output.
 ![4](https://github.com/user-attachments/assets/abbb078b-bee3-452d-9e04-0f0d61ba42bf)
 
 7.Compile the C program for RISC-V architecture using ofast option:
-sh
+```sh
 riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-
+```
 8.Disassemble the object file to view its assembly code using:
+```sh
 riscv64-unknown-elf-objdump -d sum1ton.o
-
+```
 9.minimize the assembly by using following code:
-sh
+```sh
 riscv64-unknown-elf-objdump -d sum1ton.o | less
+```
  a)we extract main function's assembly code by using:
-   /main
-
+ ```sh
+  /main
+```
 10. Use /main in the terminal to locate the main function in the assembly output.
 ![4](https://github.com/user-attachments/assets/abbb078b-bee3-452d-9e04-0f0d61ba42bf)
 
