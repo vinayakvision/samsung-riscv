@@ -9,9 +9,9 @@ College: Vidyavardhaka College of Engineering
 
 Email ID: vision.vinayak12@gmail.com
 
-GitHub Profile: Samratvinayak
+GitHub Profile: vinayakvision
 
-LinkedIN Profile: Samratvinayak
+LinkedIN Profile: vinayakvision
 
 # Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
 
