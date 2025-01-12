@@ -12,7 +12,7 @@ Email ID: vision.vinayak12@gmail.com
 GitHub Profile: vinayakvision
 
 LinkedIN Profile: vinayakvision
-
+   
 # Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
 
 ## C Language based LAB
@@ -100,3 +100,103 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
 4. -Ofast: Optimize the code aggressively for the best possible speed.
 
 5. riscv64-unknown-elf-objdump: A tool for disassembling RISC-V binaries to examine the code structure and debug it effectively.
+
+
+
+# Task 2: Task is to analyze the SPIKE simulation performance using RISC-V GCC with -O1 and -Ofast optimization levels.  
+
+## SPIKE Simulation and Compiler Optimization  
+
+This repository demonstrates how to compile a C program using RISC-V GCC, simulate it using SPIKE, and compare the performance of different optimization levels (-O1 and -Ofast). It includes detailed steps and explanations to ensure clarity.  
+
+## Steps to Complete the Task  
+
+1.Write a Simple C Program  
+
+2.The following program calculates the swaping of two numbers:  
+
+3.Compile Using RISC-V GCC
+
+4.Compile with -O1 Optimization.
+
+### Use the following command to compile the program with the -O1 optimization flag:
+```sh
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o swift.o swift.c
+```
+#### Disassemble Object Files to View Assembly Code(in new terminal).
+##### Generate Dump for -O1 Optimization.
+```sh
+riscv64-unknown-elf-objdump -d swift.o
+```
+##### Minimize the assembly by using following code:
+```sh
+riscv64-unknown-elf-objdump -d swift.o | less
+```
+![main program for O1 option](https://github.com/user-attachments/assets/8acff41d-ac85-413f-a537-5724c174618c)
+
+#### Run SPIKE Simulation
+##### Run a compiled RISC-V program on the SPIKE simulator in non-debug mode.
+```sh
+spike pk swift.o
+```
+##### Invoke the debug mode of the SPIKE RISC-V simulator. 
+```sh
+spike -d pk swift.o
+```
+![compiling with O1 option](https://github.com/user-attachments/assets/222192e6-ca90-4749-8b50-bf4078001b0d)
+
+#### Compile with -Ofast Optimization.
+##### Use the following command to compile the program with the -Ofast optimization flag:
+```sh
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o swift.o swift.c
+```
+#### Disassemble Object Files to View Assembly Code(in new terminal).
+##### Generate Dump for -Ofast Optimization.
+```sh
+riscv64-unknown-elf-objdump -d swift.o
+```
+##### Minimize the assembly by using following code:
+```sh
+riscv64-unknown-elf-objdump -d swift.o | less
+```
+![main program for ofast option](https://github.com/user-attachments/assets/66bbf42c-0593-4fbf-8f7f-c567b7d67276)
+
+#### Run SPIKE Simulation
+##### Run -O1 Binary in SPIKE
+```sh
+spike pk swift.o
+```
+##### Invoke the debug mode of the SPIKE RISC-V simulator. 
+```sh
+spike -d pk swift.o
+```
+![compiling with Ofast option](https://github.com/user-attachments/assets/a32a1593-88ae-45e8-a658-50e4cc559e86)
+
+##### After(spike -d pk swift.o) Observe the Instructions:
+
+1)After loading, SPIKE initializes and displays the Program Counter (PC) and Stack Pointer (SP).
+
+2)Press Enter repeatedly to step through the execution.
+
+3)Each press displays the next instruction executed by the program.
+
+4)The displayed instructions directly correspond to the C code of the main program, providing insights into the program's execution flow.
+### Explanation of Key Commands and Options: 
+
+1.spike:RISC-V simulator that runs RISC-V programs on a virtual machine.
+
+2.pk:Proxy kernel that acts as a minimal runtime environment for RISC-V programs, handling system calls like I/O and memory management.
+
+3.swift.o:The compiled RISC-V binary of your program (created using a RISC-V GCC compiler).
+
+4.-d (for debugging):Debugging mode in SPIKE, allows stepping through the instructions and inspecting the program's behavior.
+
+5.riscv64-unknown-elf-gcc:RISC-V GCC compiler used to compile the C program into a RISC-V object file (.o).
+
+6.-O1, -Ofast:Compiler optimization flags:
+      a.-O1: Basic optimizations for performance.
+      b.-Ofast: Aggressive optimizations for maximum speed.
+
+7.riscv64-unknown-elf-objdump:Disassembles RISC-V binaries to examine assembly code.
+
+These tools together enable compiling, running, and debugging RISC-V programs on a simulated environment.
