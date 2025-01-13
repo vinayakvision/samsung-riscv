@@ -110,7 +110,7 @@ Explanation of Key Commands and Options:
 
 
 <details>
-<summary> <b>Task 1:</b></summary> 
+<summary> <b>Task 2:</b></summary> 
 <br>
 
 Task is to analyze the SPIKE simulation performance using RISC-V GCC with -O1 and -Ofast optimization levels.  
@@ -142,7 +142,8 @@ riscv64-unknown-elf-objdump -d swift.o
 ```sh
 riscv64-unknown-elf-objdump -d swift.o | less
 ```
-![main program for O1 option](https://github.com/user-attachments/assets/8acff41d-ac85-413f-a537-5724c174618c)
+![main program for O1 option](https://github.com/user-attachments/assets/63c34a23-919a-4741-91f9-ab9e48a13e4a)
+
 
 **Run SPIKE Simulation**
 *Run a compiled RISC-V program on the SPIKE simulator in non-debug mode.*
@@ -153,7 +154,8 @@ spike pk swift.o
 ```sh
 spike -d pk swift.o
 ```
-![compiling with O1 option](https://github.com/user-attachments/assets/222192e6-ca90-4749-8b50-bf4078001b0d)
+![compiling with O1 option](https://github.com/user-attachments/assets/257327e6-bb35-412f-92de-ce70c92736d0)
+
 
 **Compile with -Ofast Optimization.**
 *Use the following command to compile the program with the -Ofast optimization flag:*
@@ -169,7 +171,8 @@ riscv64-unknown-elf-objdump -d swift.o
 ```sh
 riscv64-unknown-elf-objdump -d swift.o | less
 ```
-![main program for ofast option](https://github.com/user-attachments/assets/66bbf42c-0593-4fbf-8f7f-c567b7d67276)
+![main program for ofast option](https://github.com/user-attachments/assets/f5df539d-7170-4158-bf1b-b19240672da2)
+
 
 **Run SPIKE Simulation**
 *Run -O1 Binary in SPIKE*
@@ -180,7 +183,8 @@ spike pk swift.o
 ```sh
 spike -d pk swift.o
 ```
-![compiling with Ofast option](https://github.com/user-attachments/assets/a32a1593-88ae-45e8-a658-50e4cc559e86)
+![compiling with Ofast option](https://github.com/user-attachments/assets/c67c0820-11ea-4aae-aa01-1edaae5b8e71)
+
 
 **After(spike -d pk swift.o) Observe the Instructions:**
 
