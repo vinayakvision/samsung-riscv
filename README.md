@@ -8,7 +8,7 @@ The program focuses on the RISC-V architecture and leverages open-source tools t
 
 **College:** Vidyavardhaka College of Engineering
 
-**Email ID:** vision.vinayak12@gmail.com/ vinayakpujeri2047@gmail.com
+**Email ID:** vision.vinayak12@gmail.com / vinayakpujeri2047@gmail.com
 
 **GitHub Profile:** vinayakvision
 
