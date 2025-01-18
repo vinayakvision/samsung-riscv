@@ -427,7 +427,7 @@ This repository contains a list of 15 unique RISC-V instructions extracted from 
 
 # RISC-V Instructions
 
-This README contains a table of 15 unique RISC-V instructions, their machine codes, opcodes, formats, and instruction binaries.
+This README contains a table of 23 unique RISC-V instructions, their machine codes, opcodes, formats, and instruction binaries for my assembly codes.
 
 | Instruction                | Opcode  | Format | Machine Code | Instruction Binary                          |
 |----------------------------|---------|--------|--------------|----------------------------------------------|
