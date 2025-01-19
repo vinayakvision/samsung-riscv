@@ -14,8 +14,10 @@ The program focuses on the RISC-V architecture and leverages open-source tools t
 
 **LinkedIN Profile:** vinayakvision
 
+---
+
 <details>
-<summary> <b>Task 1:</b>The task involves thoroughly reviewing the lab videos related to C programming and the RISC-V architecture to gain a comprehensive understanding of both topics. Afterward, you are required to compile C code using two different compilers: the GCC compiler and the RISC-V compiler. This exercise will showcase your grasp of the compilation process, where you will observe and compare how each compiler translates the C code into machine code, highlighting the differences and specificities of the compilation process for different architectures.</summary> 
+<summary> <b>Task 1:</b> The task involves thoroughly reviewing the lab videos related to C programming and the RISC-V architecture to gain a comprehensive understanding of both topics. Afterward, you are required to compile C code using two different compilers: the GCC compiler and the RISC-V compiler. This exercise will showcase your grasp of the compilation process, where you will observe and compare how each compiler translates the C code into machine code, highlighting the differences and specificities of the compilation process for different architectures.</summary> 
 <br>
 Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler.
 
@@ -108,9 +110,10 @@ Explanation of Key Commands and Options:
  
    </details>
 
+---
 
 <details>
-<summary> <b>Task 2:</b>The task involves reviewing both C-based and RISC-V-based lab videos to understand the nuances of compiling C code for different architectures. Afterward, you are required to execute the process of compiling the C code using two distinct tools: the GCC compiler and the RISC-V compiler simulator. This will allow you to demonstrate your ability to work with both compilers, providing insights into how the C code is processed and converted into machine-readable code for each specific architecture.</summary> 
+<summary> <b>Task 2:</b> The task involves reviewing both C-based and RISC-V-based lab videos to understand the nuances of compiling C code for different architectures. Afterward, you are required to execute the process of compiling the C code using two distinct tools: the GCC compiler and the RISC-V compiler simulator. This will allow you to demonstrate your ability to work with both compilers, providing insights into how the C code is processed and converted into machine-readable code for each specific architecture.</summary> 
 <br>
 
 Task is to analyze the SPIKE simulation performance using RISC-V GCC with -O1 and -Ofast optimization levels.  
@@ -214,7 +217,11 @@ spike -d pk swift.o
 7. riscv64-unknown-elf-objdump:Disassembles RISC-V binaries to examine assembly code.
 
 These tools together enable compiling, running, and debugging RISC-V programs on a simulated environment.
+
 </details>
+
+---
+
 <details>
 <summary><b>Task 3:</b> The goal is to analyze and categorize each of the provided instructions based on their type, whether it be R-type, I-type, or J-type, and then translate them into their respective 32-bit machine instruction codes. These instruction codes should be represented in the appropriate format, ensuring that each instruction is properly encoded according to the specific structure and opcode requirements of the given architecture. The result should provide a detailed mapping of the instructions to their corresponding binary code representations.</summary>
 
@@ -456,3 +463,5 @@ This README contains a table of 23 unique RISC-V instructions, their machine cod
 | beqz a5, 104e4             | 1100011 | B-type | 0x02078863   | 00000000001000110000000001100011            |
 
 </details>
+
+---
