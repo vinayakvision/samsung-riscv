@@ -1,8 +1,8 @@
 
-# samsung-riscv
+# **Samsung-riscv**
 The program focuses on the RISC-V architecture and leverages open-source tools to educate participants about VLSI chip design and RISC-V. The internship is led by Kunal Ghosh Sir.
 
-# Basic Details
+## *Basic Details*
 
 **Name:** Vinayak Venkappa Pujeri
 
