@@ -469,6 +469,12 @@ This README contains a table of 23 unique RISC-V instructions, their machine cod
 <summary> <b>Task 4:</b>This task involves simulating the RISC-V Core using the provided Verilog netlist and testbench. You will set up a simulation environment using tools like Icarus Verilog and GTKWave, run the simulation to verify the functional correctness of the core, and analyze output signals. Waveform snapshots of the executed instructions must be captured and uploaded to your GitHub repository along with a brief description, demonstrating your understanding of RISC-V functional simulation and verification.</summary> 
 <br>
 
+## 2. BLOCK DIAGRAM OF RISC-V RV32I
+![image](https://user-images.githubusercontent.com/110079631/181293948-beb8622c-7696-4b06-b6c9-eeab9b8ab9d3.png)
+
+## 3. INSTRUCTION SET OF RISC-V RV32I
+![image](https://user-images.githubusercontent.com/110079631/181298133-60269bc2-01da-4b5c-8b42-69057b8dc15c.png)
+
 # RISC-V Core Functional Simulation 
 ## 4. FUNCTIONAL SIMULATION
 
@@ -769,7 +775,8 @@ Write-Back Stage:
 
 **``` Full 5-stage instruction pipeline and pc-increment description Waveform```**
 
-![gtk_wave](https://github.com/user-attachments/assets/b8c442dc-8183-4617-923a-429870206a18)
+![gtk_wave](https://github.com/user-attachments/assets/da98d295-2b90-421b-9b95-f69ff81b5e0a)
+
 
 </details>
 ---
