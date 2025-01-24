@@ -465,3 +465,257 @@ This README contains a table of 23 unique RISC-V instructions, their machine cod
 </details>
 
 ---
+<details>
+<summary> <b>Task 4:</b>This task involves simulating the RISC-V Core using the provided Verilog netlist and testbench. You will set up a simulation environment using tools like Icarus Verilog and GTKWave, run the simulation to verify the functional correctness of the core, and analyze output signals. Waveform snapshots of the executed instructions must be captured and uploaded to your GitHub repository along with a brief description, demonstrating your understanding of RISC-V functional simulation and verification.</summary> 
+<br>
+
+# RISC-V Core Functional Simulation 
+## 4. FUNCTIONAL SIMULATION
+
+### 4.1 About iverilog and gtkwave
+- Icarus Verilog is an implementation of the Verilog hardware description language.
+- GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
+
+### 4.2 Installing iverilog and gtkwave
+
+- **For Ubuntu**
+
+ Open your terminal and type the following to install iverilog and GTKWave
+ ```
+ $   sudo apt get update
+ $   sudo apt get install iverilog gtkwave
+ ```
+
+- **To clone the repository and download the netlist files for simulation , enter the following commands in your terminal.**
+
+ ```
+ $ git clone https://github.com/vinayrayapati/iiitb_rv32i
+ $ cd iiitb_rv32i
+ ```
+- **To simulate and run the verilog code , enter the following commands in your terminal.**
+
+```
+$ iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+$ ./iiitb_rv32i
+```
+- **To see the output waveform in gtkwave, enter the following commands in your terminal.**
+
+`$ gtkwave iiitb_rv32i.vcd`
+
+### 4.3 The output waveform
+
+ The output waveform showing the instructions performed in a 5-stage pipelined architecture.
+
+## Instructions and Pipeline Details  
+
+Below are the 15 instructions and their corresponding pipeline details:  
+
+---
+
+### 1. `add r6, r2, r1`  
+**Purpose:** Add `r2` and `r1`, store the result in `r6`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `add` instruction.
+  - IF_ID_NPC: Holds the next program counter value.
+Decode Stage:
+  - ID_EX_IR: Ensures the instruction is decoded.
+  - ID_EX_A: Value of register `r2`.
+  - ID_EX_B: Value of register `r1`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r2 + r1`.
+  - EX_MEM_IR: Holds the `add` instruction.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r6`.
+```
+
+---
+
+### 2. `sub r7, r1, r2`  
+**Purpose:** Subtract `r2` from `r1`, store the result in `r7`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `sub` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r1`.
+  - ID_EX_B: Value of register `r2`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r1 - r2`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r7`.
+```
+
+---
+
+### 3. `and r8, r1, r3`  
+**Purpose:** Perform bitwise AND between `r1` and `r3`, store the result in `r8`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `and` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r1`.
+  - ID_EX_B: Value of register `r3`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r1 & r3`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r8`.
+```
+
+---
+
+### 4. `or r9, r2, r5`  
+**Purpose:** Perform bitwise OR between `r2` and `r5`, store the result in `r9`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `or` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r2`.
+  - ID_EX_B: Value of register `r5`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r2 | r5`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r9`.
+```
+
+---
+
+### 5. `xor r10, r1, r4`  
+**Purpose:** Perform bitwise XOR between `r1` and `r4`, store the result in `r10`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `xor` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r1`.
+  - ID_EX_B: Value of register `r4`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r1 ^ r4`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r10`.
+```
+
+---
+
+### 6. `addi r12, r4, 5`  
+**Purpose:** Add immediate value `5` to `r4`, store the result in `r12`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `addi` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r4`.
+  - ID_EX_IMMEDIATE: Immediate value `5`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r4 + 5`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r12`.
+```
+
+---
+
+### 7. `sw r3, r1, 2`  
+**Purpose:** Store the value of `r3` into memory address `r1 + 2`.  
+```markdown
+Memory Access Stage:
+  - EX_MEM_ALUOUT: Computed memory address (`r1 + 2`).
+  - EX_MEM_B: Value of `r3` to store.
+```
+
+---
+
+### 8. `lw r13, r1, 2`  
+**Purpose:** Load word from memory address `r1 + 2` into `r13`.  
+```markdown
+Memory Access Stage:
+  - MEM_WB_LMD: Value loaded from memory.
+Write-Back Stage:
+  - WB_OUT: Verifies the value is written to `r13`.
+```
+
+---
+
+### 9. `beq r0, r0, 15`  
+**Purpose:** Branch to PC + 15 if `r0 == r0` (always true).  
+```markdown
+Decode Stage:
+  - BR_EN: High (branch taken).
+Fetch Stage:
+  - IF_ID_NPC: Updated program counter.
+```
+
+---
+
+### 10. `add r14, r2, r2`  
+**Purpose:** Add `r2` to itself, store the result in `r14`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `add` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r2`.
+  - ID_EX_B: Value of register `r2`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r2 + r2`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r14`.
+```
+
+---
+
+### 11. `bne r0, r1, 20`  
+**Purpose:** Branch to PC + 20 if `r0 != r1`.  
+```markdown
+Decode Stage:
+  - BR_EN: High if `r0 != r1`.
+Fetch Stage:
+  - IF_ID_NPC: Updated program counter.
+```
+
+---
+
+### 12. `addi r12, r4, 5`  
+**Purpose:** Add immediate value `5` to `r4`, store the result in `r12`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `addi` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r4`.
+  - ID_EX_IMMEDIATE: Immediate value `5`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r4 + 5`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r12`.
+```
+
+---
+
+### 13. `sll r15, r1, r2 (2)`  
+**Purpose:** Perform logical left shift of `r1` by 2 (specified in `r2`), store the result in `r15`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `sll` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r1`.
+  - ID_EX_SHAMT: Immediate shift value `2`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r1 << 2`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r15`.
+```
+
+---
+
+### 14. `srl r16, r14, r2 (2)`  
+**Purpose:** Perform logical right shift of `r14` by 2 (specified in `r2`), store the result in `r16`.  
+```markdown
+Fetch Stage:
+  - IF_ID_IR: Holds the `srl` instruction.
+Decode Stage:
+  - ID_EX_A: Value of register `r14`.
+  - ID_EX_SHAMT: Immediate shift value `2`.
+Execute Stage:
+  - EX_MEM_ALUOUT: Result of `r14 >> 2`.
+Write-Back Stage:
+  - WB_OUT: Verifies the result is written to `r16`.
+```
+
+
+</details>
+---
