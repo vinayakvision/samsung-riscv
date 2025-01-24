@@ -717,5 +717,56 @@ Write-Back Stage:
 ```
 
 
+#### *Analysing the Output Waveform of various instructions*  
+**```Instruction 1: ADD R6, R2, R1```**  
+  
+![add](https://github.com/user-attachments/assets/44851b1c-806a-4182-81ab-47af3cf725be)
+
+
+**```Instruction 2: SUB R7, R1, R2```**  
+  
+![sub](https://github.com/user-attachments/assets/1104fc06-491a-4e9c-971c-8b51387bd2d6)
+
+
+**```Instruction 3: AND R8, R1, R3```**  
+
+![and](https://github.com/user-attachments/assets/ddeb5386-04ac-4ea7-a4ee-1e4d2968d2c9)
+
+
+**```Instruction 4: OR R9, R2, R5```**  
+
+![or](https://github.com/user-attachments/assets/c10ba03d-4f25-49f6-a1c4-b68dde3c1383)
+
+
+**```Instruction 5: XOR R10, R1, R4```**  
+
+![xor](https://github.com/user-attachments/assets/ed7a6299-92a0-4ed5-b812-97050af83c54)
+
+
+**```Instruction 6: SLT R1, R2, R4```**  
+
+![slt](https://github.com/user-attachments/assets/d463ee88-c39f-41c3-a4b3-31ee670da5e3)
+
+
+**```Instruction 7: ADDI R12, R4, 5```**  
+
+![addi](https://github.com/user-attachments/assets/4581b98f-e445-4776-8700-68b03f26131f)
+
+
+**```Instruction 8: BEQ R0, R0, 15```**  
+  
+![BEQ](https://github.com/user-attachments/assets/02bbbd72-6d84-4595-a0af-5157524ccdf8)
+
+ 
+**```Instruction 9:sw r3,r1,2```**
+
+![sw](https://github.com/user-attachments/assets/65fd8529-9b5e-4572-a796-c370ab6b7051)
+
+  
+**```Instruction 10:lw r13,r1,2```**  
+
+![lw](https://github.com/user-attachments/assets/58c72387-6ca2-4e15-a7c3-ca68f906ee3f)
+
+
 </details>
 ---
