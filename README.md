@@ -775,7 +775,8 @@ Write-Back Stage:
 
 **``` Full 5-stage instruction pipeline and pc-increment description Waveform```**
 
-![gtk_wave](https://github.com/user-attachments/assets/da98d295-2b90-421b-9b95-f69ff81b5e0a)
+![5-stage instruction pipeline and pc-increment description Waveform](https://github.com/user-attachments/assets/2bce01e3-3405-432d-a1d6-ec359d45d560)
+
 
 
 </details>
