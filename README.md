@@ -786,6 +786,10 @@ Write-Back Stage:
 
 <details>
 
+<summary> <b>Task 5:</b> This task involves implementing an 8-bit Arithmetic Logic Unit (ALU) on the VSDSquadron Mini RISC-V development board. You will design and program the ALU using Verilog, upload the code to the board, and validate its functionality through hardware testing. The ALU should support basic arithmetic and logic operations such as addition, subtraction, AND, OR, and XOR. The output results must be observed using onboard LEDs, and the verification process should be documented with relevant images and explanations. Finally, all implementation details, including the Verilog code and circuit connections, must be uploaded to your GitHub repository.</summary> 
+<br>
+
+
 # 🚀 8-Bit ALU Implementation using VSDSquadron Mini RISC-V Board
 
 ## 📖 Project Overview
