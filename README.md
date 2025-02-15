@@ -786,7 +786,7 @@ Write-Back Stage:
 
 <details>
 
-<summary> <b>Task 5:</b> This task involves designing an 8-bit Arithmetic Logic Unit (ALU) for the VSDSquadron Mini RISC-V development board. The ALU should support fundamental arithmetic and logic operations such as addition, subtraction, AND, OR, and XOR. You will define the ALU architecture, determine input/output requirements, and plan the pin mapping. A functional block diagram should be created to illustrate the internal structure of the ALU. The final design document, including an overview of ALU functionality, supported operations, and expected results, must be uploaded to your GitHub repository.</summary>  
+<summary> <b>Task 5:</b> This task involves designing an 8-bit Arithmetic Logic Unit (ALU) for the VSDSquadron Mini RISC-V development board. The ALU should support fundamental arithmetic and logic operations such as addition, subtraction, AND, OR, and XOR. You will define the ALU architecture, determine input/output requirements, and plan the pin mapping. A functional block diagram should be created to illustrate the internal structure of the ALU.</summary>  
 <br>
 
 
