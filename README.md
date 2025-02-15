@@ -828,7 +828,10 @@ The ALU supports arithmetic and logic operations, with input control via buttons
 
 ---
 
-## 📷 Pinout Diagram & Circuit Connection  
+## 📷 General block diagram of 8 bit ALU
+![block-diagram-of-8-bit-alu-l](https://github.com/user-attachments/assets/c669a3ef-f4db-46bf-aef8-7bd78a025939)
+
+
 ### 🔹 Pinout Diagram:
 - A **clear schematic** showing GPIO pins for LEDs, buttons, and the VSDSquadron board.
 
