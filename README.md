@@ -860,8 +860,8 @@ An **automatic light system** is a setup designed to automatically control the l
    - Write the **C firmware** to read the IR sensor output.  
    - Configure the GPIO pins for input (IR sensor) and output (LED).  
    - Implement logic to **blink the LED three times** upon detecting motion.  
-   - Keep the LED **ON** as long as movement is detected.  
-   - Turn the LED **OFF** after a delay when no movement is present.  
+   - Keep the LED **OFF** as long as movement is detected.  
+   - Turn the LED **ON** after a delay when no movement is present.  
 
 3. **Compilation & Upload:**  
    - Compile the code using a **RISC-V compatible toolchain**.  
@@ -869,12 +869,11 @@ An **automatic light system** is a setup designed to automatically control the l
 
 4. **Testing & Debugging:**  
    - Test the system in different lighting conditions.  
-   - Adjust sensor sensitivity if needed.  
-   - Verify energy efficiency by monitoring power consumption.  
+   - Adjust sensor sensitivity if needed.   
 
 ### Expected Output:  
-- When motion is detected, the LED blinks **three times** and then stays ON.  
-- If no motion is detected for a certain period, the LED automatically **turns OFF**.  
+- If motion is detected for a certain period, the LED automatically **turns OFF**. 
+- If no motion is detected for a certain period, the LED automatically **turns ON**.  
 
 This implementation ensures **automatic lighting control**, **energy efficiency**, and **security enhancements** for various applications.
 ---
