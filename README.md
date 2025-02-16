@@ -783,23 +783,20 @@ Write-Back Stage:
 
 ---
 
-
 <details>
-
-<summary> <b>Task 5:</b> This task involves designing an 8-bit Arithmetic Logic Unit (ALU) for the VSDSquadron Mini RISC-V development board. The ALU should support fundamental arithmetic and logic operations such as addition, subtraction, AND, OR, and XOR. You will define the ALU architecture, determine input/output requirements, and plan the pin mapping. A functional block diagram should be created to illustrate the internal structure of the ALU.</summary>  
+<summary> <b>Task 5:</b>An automatic light system is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns on the LED, providing illumination. Additionally, to indicate the presence of movement, the LED initially blinks three times and then remains stable. If no motion is detected for a certain period, the LED turns off, ensuring energy efficiency. This system is widely used in home automation, security lighting, and energy-saving applications to enhance convenience, safety, and power conservation.</summary> 
 <br>
 
+# 🚀 Automatic Light System using VSDSquadron Mini RISC-V Board
 
-# 🚀 8-Bit ALU Implementation using VSDSquadron Mini RISC-V Board
+## 📚 Project Overview
+An **automatic light system** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by blinking the LED three times.
 
-## 📖 Project Overview
-This project implements an **8-bit Arithmetic Logic Unit (ALU)** on the **VSDSquadron Mini RISC-V Board**.  
-The ALU supports arithmetic and logic operations, with input control via buttons and results displayed on LEDs.
-
-### 🎯 ALU Operations:
-✅ **Arithmetic:** Addition, Subtraction  
-✅ **Logic:** AND, OR, XOR, Left Shift  
-✅ **Overflow Handling:** Buzzer alert  
+### 🎯 Features:
+✅ **Automatic Light Control**: Lights up based on motion detection  
+✅ **Motion Indication**: LED blinks three times when motion is detected  
+✅ **Energy Efficiency**: Prevents unnecessary power usage  
+✅ **Security and Automation**: Enhances convenience and safety  
 
 ---
 
@@ -807,42 +804,90 @@ The ALU supports arithmetic and logic operations, with input control via buttons
 | Component | Quantity | Description |
 |-----------|----------|-------------|
 | **VSDSquadron Mini Board** | 1 | RISC-V SoC-based development board |
-| **Push Buttons** | 4 | Inputs for A, B, and operation selection |
-| **Toggle Switch** | 1 | Selects Arithmetic/Logic mode |
-| **LEDs (8-bit Output)** | 8 | Displays ALU result |
-| **Buzzer (Optional)** | 1 | Alerts overflow |
-| **Resistors (1kΩ)** | 8 | Limits current for LEDs |
-| **Breadboard & Jumper Wires** | - | For connections |
+| **IR Sensor** | 1 | Detects motion based on infrared radiation |
+| **LEDs** | 1 | Indicates motion detection |
+| **Breadboard** | 1 | For circuit connections |
+| **USB Cable** | 1 | Power and programming |
+| **Jumper Wires** | - | For making connections |
 
 ---
 
 ## 📊 Pin Connections  
 
-| **Board Pin** | **Component** | **Purpose** |
+| **Component** | **Board Pin** | **Purpose** |
 |--------------|-------------|-------------|
-| **GPIO0 - GPIO7** | **8 LEDs** | Display ALU result |
-| **GPIO8, GPIO9** | **Push Buttons** | Input A and B |
-| **GPIO10, GPIO11** | **Push Buttons** | Operation selection |
-| **GPIO12** | **Toggle Switch** | Select Arithmetic/Logic mode |
-| **GPIO13** | **Buzzer (Optional)** | Overflow indicator |
+| **VCC of IR Sensor** | **3.2V** | Power supply |
+| **GND of IR Sensor** | **GND** | Ground connection |
+| **OUT of IR Sensor** | **Pin 4** | Motion detection signal |
+| **LED** | **Pin 6** | Indicates motion detected |
 
 ---
 
-## 📷 General block diagram of 8 bit ALU
-![block-diagram-of-8-bit-alu-l](https://github.com/user-attachments/assets/c669a3ef-f4db-46bf-aef8-7bd78a025939)
+## 📝 Working  
+- The **IR sensor** is placed in a location where it can detect motion within its range.
+- It continuously monitors infrared radiation for any changes caused by movement.
+- When an individual enters the detection range, the IR sensor sends a signal to the microcontroller.
+- Upon detecting motion, the system turns on the LED and blinks it **three times** as an indication of motion.
 
+---
 
-### 🔹 Pinout Diagram:
-- A **clear schematic** showing GPIO pins for LEDs, buttons, and the VSDSquadron board.
+## 🛠️ Code Implementation  
+```c
+#include <ch32v00x.h>
+#include <debug.h>
 
-### 🔹 Circuit Connection:
-- A **diagram using PowerPoint or Fritzing** to illustrate wiring.
+void GPIO_Config(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+    
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+    
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+}
 
-🖼️ *(Upload your images in the GitHub repo and use the following format to display them:)*  
-```markdown
-![Pinout Diagram](images/pinout.png)
-![Circuit Connection](images/circuit.png)
+int main(void)
+{
+    uint8_t IR = 0;
+    uint8_t set = 1;
+    uint8_t reset = 0;
+    uint8_t a = 0;
+    
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    SystemCoreClockUpdate();
+    Delay_Init();
+    GPIO_Config();
+    
+    while (1)
+    {
+        IR = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_4);
+        if (IR == 1)
+        {
+            for (a = 0; a < 3; a++)
+            {
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, set);
+                Delay_Ms(200);
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, reset);
+                Delay_Ms(100);
+            }
+        }
+    }
+}
 ```
+## Applications
+**Security Lighting :** These systems can be used for security lighting in outdoor spaces, such as gardens, driveways, and pathways, to deter intruders and provide visibility at night.
+**Home Automation :** Automatic light systems can be installed in homes, particularly in areas such as hallways, staircases, and bathrooms, where lights need to be turned on/off based on occupancy.
+**Energy Efficiency :** Automatic light systems contribute to energy conservation by ensuring that lights are not left on unnecessarily when the area is unoccupied.
+**Accessibility :** These systems can improve accessibility for individuals with disabilities by providing automatic illumination in response to their movement.
+
+# Conclusion
+During the VSD Squadron mini Internship, I embarked on a journey exploring various aspects of VLSI system design on the RISC-V architecture, alongside open-source EDA tools.
+
 </details>
 
 ---
