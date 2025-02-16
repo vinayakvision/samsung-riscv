@@ -787,12 +787,12 @@ Write-Back Stage:
 <summary> <b>Task 5:</b>An automatic light system is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns on the LED, providing illumination. Additionally, to indicate the presence of movement, the LED initially blinks three times and then remains stable. If no motion is detected for a certain period, the LED turns off, ensuring energy efficiency. This system is widely used in home automation, security lighting, and energy-saving applications to enhance convenience, safety, and power conservation.</summary> 
 <br>
 
-# 🚀 Automatic Light System using VSDSquadron Mini RISC-V Board
+# Automatic Light System using VSDSquadron Mini RISC-V Board
 
-## 📚 Project Overview
+## Project Overview
 An **automatic light system** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by blinking the LED three times.
 
-### 🎯 Features:
+### Features:
 ✅ **Automatic Light Control**: Lights up based on motion detection  
 ✅ **Motion Indication**: LED blinks three times when motion is detected  
 ✅ **Energy Efficiency**: Prevents unnecessary power usage  
@@ -800,7 +800,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 ---
 
-## 🔧 Required Components  
+## Required Components  
 | Component | Quantity | Description |
 |-----------|----------|-------------|
 | **VSDSquadron Mini Board** | 1 | RISC-V SoC-based development board |
@@ -812,7 +812,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 ---
 
-## 📊 Pin Connections  
+## Pin Connections  
 
 | **Component** | **Board Pin** | **Purpose** |
 |--------------|-------------|-------------|
@@ -823,7 +823,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 ---
 
-## 📝 Working  
+## Working  
 - The **IR sensor** is placed in a location where it can detect motion within its range.
 - It continuously monitors infrared radiation for any changes caused by movement.
 - When an individual enters the detection range, the IR sensor sends a signal to the microcontroller.
@@ -831,7 +831,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 ---
 
-## 🛠️ Code Implementation  
+## Code Implementation  
 ```c
 #include <ch32v00x.h>
 #include <debug.h>
@@ -880,10 +880,11 @@ int main(void)
 }
 ```
 ## Applications
-**Security Lighting :** These systems can be used for security lighting in outdoor spaces, such as gardens, driveways, and pathways, to deter intruders and provide visibility at night.
-**Home Automation :** Automatic light systems can be installed in homes, particularly in areas such as hallways, staircases, and bathrooms, where lights need to be turned on/off based on occupancy.
-**Energy Efficiency :** Automatic light systems contribute to energy conservation by ensuring that lights are not left on unnecessarily when the area is unoccupied.
-**Accessibility :** These systems can improve accessibility for individuals with disabilities by providing automatic illumination in response to their movement.
+✅ **Security Lighting**: These systems can be used for security lighting in outdoor spaces, such as gardens, driveways, and pathways, to deter intruders and provide visibility at night.
+✅ **Home Automation**: Automatic light systems can be installed in homes, particularly in areas such as hallways, staircases, and bathrooms, where lights need to be turned on/off based on occupancy.
+✅ **Energy Efficiency**: Automatic light systems contribute to energy conservation by ensuring that lights are not left on unnecessarily when the area is unoccupied.
+✅ **Accessibility**: These systems can improve accessibility for individuals with disabilities by providing automatic illumination in response to their movement.
+
 
 # Conclusion
 During the VSD Squadron mini Internship, I embarked on a journey exploring various aspects of VLSI system design on the RISC-V architecture, alongside open-source EDA tools.
