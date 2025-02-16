@@ -784,7 +784,7 @@ Write-Back Stage:
 ---
 
 <details>
-<summary> <b>Task 5:</b>An automatic light system is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns on the LED, providing illumination. Additionally, to indicate the presence of movement, the LED initially blinks three times and then remains stable. If no motion is detected for a certain period, the LED turns off, ensuring energy efficiency. This system is widely used in home automation, security lighting, and energy-saving applications to enhance convenience, safety, and power conservation.</summary> 
+<summary> <b>Task 5:</b>An automatic light system is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns OFF the LED, providing illumination. Additionally, to indicate the presence of movement. If no motion is detected for a certain period, the LED turns ON, ensuring process coninuation. This system is widely used in home automation, security lighting, Protected Area, Military surveillance, safety.</summary> 
 <br>
 
 # Automatic Light System using VSDSquadron Mini RISC-V Board
@@ -839,6 +839,45 @@ An **automatic light system** is a setup designed to automatically control the l
 - Upon detecting motion, the system turns on the LED and blinks it **three times** as an indication of motion.
 
 ---
+</details>
+
+---
+
+
+<details>
+<summary> <b>Task 6:</b>The Automatic Light System uses the VSDSquadron Mini RISC-V Board, an IR sensor, and an LED for motion-based lighting control. The IR sensor detects movement, triggering the LED to blink three times before staying ON. If no motion is detected, the LED turns OFF. This system is ideal for home automation, security, offering smart, hands-free lighting control.</summary> 
+<br>
+
+## Project Implementation  
+
+### Steps to Implement:  
+1. **Hardware Setup:**  
+   - Connect the **IR sensor** to the board's GPIO pins.  
+   - Wire an **LED** to indicate motion detection.  
+   - Use a **breadboard** for easy prototyping and secure connections.  
+
+2. **Software Development:**  
+   - Write the **C firmware** to read the IR sensor output.  
+   - Configure the GPIO pins for input (IR sensor) and output (LED).  
+   - Implement logic to **blink the LED three times** upon detecting motion.  
+   - Keep the LED **ON** as long as movement is detected.  
+   - Turn the LED **OFF** after a delay when no movement is present.  
+
+3. **Compilation & Upload:**  
+   - Compile the code using a **RISC-V compatible toolchain**.  
+   - Flash the program onto the **VSDSquadron Mini Board**.  
+
+4. **Testing & Debugging:**  
+   - Test the system in different lighting conditions.  
+   - Adjust sensor sensitivity if needed.  
+   - Verify energy efficiency by monitoring power consumption.  
+
+### Expected Output:  
+- When motion is detected, the LED blinks **three times** and then stays ON.  
+- If no motion is detected for a certain period, the LED automatically **turns OFF**.  
+
+This implementation ensures **automatic lighting control**, **energy efficiency**, and **security enhancements** for various applications.
+---
 
 ## Code Implementation  
 ```c
@@ -891,7 +930,6 @@ int main(void)
 ## Applications
 ✅ **Security Lighting**: These systems can be used for security lighting in outdoor spaces, such as gardens, driveways, and pathways, to deter intruders and provide visibility at night.
 ✅ **Home Automation**: Automatic light systems can be installed in homes, particularly in areas such as hallways, staircases, and bathrooms, where lights need to be turned on/off based on occupancy.
-✅ **Energy Efficiency**: Automatic light systems contribute to energy conservation by ensuring that lights are not left on unnecessarily when the area is unoccupied.
 ✅ **Accessibility**: These systems can improve accessibility for individuals with disabilities by providing automatic illumination in response to their movement.
 
 
@@ -899,5 +937,4 @@ int main(void)
 During the VSD Squadron mini Internship, I embarked on a journey exploring various aspects of VLSI system design on the RISC-V architecture, alongside open-source EDA tools.
 
 </details>
-
 ---
