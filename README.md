@@ -821,8 +821,17 @@ An **automatic light system** is a setup designed to automatically control the l
 | **OUT of IR Sensor** | **Pin 4** | Motion detection signal |
 | **LED** | **Pin 6** | Indicates motion detected |
 
----
 
+## Pin connection diagram
+
+![Automatic-light-system circuit diagram](https://github.com/user-attachments/assets/bfd0cca4-c559-4201-921b-378f1be785f1)
+
+---
+## breadboard connections
+
+![physical connections on breadboard](https://github.com/user-attachments/assets/989f1c29-0fc7-4bb4-a938-f870a1d14c26)
+
+---
 ## Working  
 - The **IR sensor** is placed in a location where it can detect motion within its range.
 - It continuously monitors infrared radiation for any changes caused by movement.
