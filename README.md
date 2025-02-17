@@ -6,7 +6,7 @@ The program focuses on the RISC-V architecture and leverages open-source tools t
 
 **Name:** Vinayak Venkappa Pujeri
 
-**College:** Vidyavardhaka College of Engineering
+**College:** Vidyavardhaka College of Engineering, Mysuru
 
 **Email ID:** vision.vinayak12@gmail.com / vinayakpujeri2047@gmail.com
 
