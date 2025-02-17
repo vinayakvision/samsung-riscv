@@ -844,7 +844,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 
 <details>
-<summary> <b>Task 6:</b>The Automatic Light System uses the VSDSquadron Mini RISC-V Board, an IR sensor, and an LED for motion-based lighting control. The IR sensor detects movement, triggering the LED to blink three times before staying ON. If no motion is detected, the LED turns OFF. This system is ideal for home automation, security, offering smart, hands-free lighting control.</summary> 
+<summary> <b>Task 6:</b>The Automatic Light System uses the VSDSquadron Mini RISC-V Board, an IR sensor, and an LED for motion-based lighting control. The IR sensor detects movement, triggering the LED to blink three times before staying ON. If no motion is detected, the LED turns ON. This system is ideal for home automation, security, offering smart, hands-free lighting control.</summary> 
 <br>
 
 ## Project Implementation  
@@ -874,7 +874,7 @@ An **automatic light system** is a setup designed to automatically control the l
 - If motion is detected for a certain period, the LED automatically **turns OFF**. 
 - If no motion is detected for a certain period, the LED automatically **turns ON**.  
 
-This implementation ensures **automatic lighting control**, **energy efficiency**, and **security enhancements** for various applications.
+This implementation ensures **automatic lighting control**, **indicate the proper process**, and **security enhancements** for various applications.
 ---
 
 ## Code Implementation  
@@ -926,10 +926,38 @@ int main(void)
 }
 ```
 ## Applications
-✅ **Security Lighting**: These systems can be used for security lighting in outdoor spaces, such as gardens, driveways, and pathways, to deter intruders and provide visibility at night.
-✅ **Home Automation**: Automatic light systems can be installed in homes, particularly in areas such as hallways, staircases, and bathrooms, where lights need to be turned on/off based on occupancy.
-✅ **Accessibility**: These systems can improve accessibility for individuals with disabilities by providing automatic illumination in response to their movement.
+✅ **Energy-Saving Lighting in Offices and Homes:**
 
+When motion is detected, lights (LED) turn OFF to save energy, assuming that the motion indicates that someone is actively using the space (e.g., a person working in a room or moving around).
+When no motion is detected, lights automatically turn ON, ensuring lights are on in case the space is left unoccupied for a while.
+
+✅ **Interactive Displays or Exhibits:**
+
+In museums, galleries, or exhibitions, the LED lights could indicate the activity level in an area. Motion triggers the lights to turn OFF, suggesting interaction or focus, while no motion for a period means the area is idle, and the lights turn ON as an indicator of inactivity or to attract attention to an exhibit.
+
+✅ **Restroom or Bathroom Lights:**
+
+If someone is in the restroom (motion is detected), the light could turn OFF after a set time to conserve energy when they leave. When the restroom is idle for a set period, the light would turn ON to indicate it's available or to prevent it from being left in the dark.
+
+✅ **Smart Home Automation for Lighting:**
+
+The system could be set up to automatically adjust based on whether a room is in use. When the room is being actively used (motion is detected), the LED (or lights) would turn OFF. After a period of inactivity, the lights would turn ON, indicating that the space is empty or the user wants some light after inactivity.
+
+✅ **Warehouse or Storage Area Lighting:**
+
+In warehouses, lights could be automatically controlled to save energy. When motion (such as a worker’s movement) is detected, the lights can turn OFF to save power when there’s enough natural light or no activity. After a period of inactivity (no motion), the lights turn ON to ensure visibility.
+
+✅ **Smart Lighting in Parking Lots:**
+
+Motion triggers the lights to turn OFF to save energy when cars or people are not moving in the parking lot, and after a period of no motion, lights turn ON to indicate safety or to prevent dark spaces in parking areas.
+
+✅ **Dormitory or Shared Room Lighting:**
+
+In dorms or shared living spaces, the system can be set up to automatically turn lights OFF when students or roommates are moving around (indicating active use), and ON when there's no movement for a while, to ensure lighting is available when someone returns to the room.
+
+✅ **Motion Sensing in Data Centers:**
+
+To save energy, lights in a data center could automatically turn OFF when motion is detected in specific areas, indicating that those areas are being used or walked through. If there's no motion for a period (e.g., no maintenance or activity), the lights turn ON to signal that the area is idle or to alert for maintenance needs.
 
 # Conclusion
 During the VSD Squadron mini Internship, I embarked on a journey exploring various aspects of VLSI system design on the RISC-V architecture, alongside open-source EDA tools.
