@@ -790,12 +790,11 @@ Write-Back Stage:
 # Automatic Light System using VSDSquadron Mini RISC-V Board
 
 ## Project Overview
-An **automatic light system** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by blinking the LED three times.
+An **automatic light system** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by stoping the Blinking LED.
 
 ### Features:
 ✅ **Automatic Light Control**: Lights up based on motion detection  
-✅ **Motion Indication**: LED blinks three times when motion is detected  
-✅ **Energy Efficiency**: Prevents unnecessary power usage  
+✅ **Motion Indication**: LED blinks OFF when motion is detected   
 ✅ **Security and Automation**: Enhances convenience and safety  
 
 ---
@@ -836,7 +835,7 @@ An **automatic light system** is a setup designed to automatically control the l
 - The **IR sensor** is placed in a location where it can detect motion within its range.
 - It continuously monitors infrared radiation for any changes caused by movement.
 - When an individual enters the detection range, the IR sensor sends a signal to the microcontroller.
-- Upon detecting motion, the system turns on the LED and blinks it **three times** as an indication of motion.
+- Upon detecting motion, the system turns OFF the LED and blinks on when no motion Detected which indicates process will continue.
 
 ---
 </details>
