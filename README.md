@@ -959,6 +959,9 @@ In dorms or shared living spaces, the system can be set up to automatically turn
 
 To save energy, lights in a data center could automatically turn OFF when motion is detected in specific areas, indicating that those areas are being used or walked through. If there's no motion for a period (e.g., no maintenance or activity), the lights turn ON to signal that the area is idle or to alert for maintenance needs.
 
+## Application Demo video
+
+
 # Conclusion
 During the VSD Squadron mini Internship, I embarked on a journey exploring various aspects of VLSI system design on the RISC-V architecture, alongside open-source EDA tools.
 
