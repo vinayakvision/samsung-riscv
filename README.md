@@ -784,13 +784,13 @@ Write-Back Stage:
 ---
 
 <details>
-<summary> <b>Task 5:</b>An Inverse Adaptive Motion-Sensing Illumination System (IAMIS) is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns OFF the LED, providing illumination. Additionally, to indicate the presence of movement. If no motion is detected for a certain period, the LED turns ON, ensuring process coninuation. This system is widely used in home automation, security lighting, Protected Area, Military surveillance, safety.</summary> 
+<summary> <b>Task 5:</b> The Reverse Motion-Triggered Illumination System (ReMoTIS) is an intelligent setup designed to control lighting based on the presence or absence of individuals within its detection range. The system utilizes an IR sensor to continuously monitor its surroundings for any movement. When motion is detected, the system automatically turns OFF the LED, providing illumination. Additionally, to indicate the presence of movement. If no motion is detected for a certain period, the LED turns ON, ensuring process coninuation. This system is widely used in home automation, security lighting, Protected Area, Military surveillance, safety.</summary> 
 <br>
 
-# Automatic Light System using VSDSquadron Mini RISC-V Board
+# Reverse Motion-Triggered Illumination System (ReMoTIS) using VSDSquadron Mini RISC-V Board
 
 ## Project Overview
-An **automatic light system** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by stoping the Blinking LED.
+An **Reverse Motion-Triggered Illumination System (ReMoTIS)** is a setup designed to automatically control the lighting based on the presence or absence of individuals within its detection range. This system will also give an indication of motion detected by stoping the Blinking LED.
 
 ### Features:
 ✅ **Automatic Light Control**: Lights up based on motion detection  
@@ -844,7 +844,7 @@ An **automatic light system** is a setup designed to automatically control the l
 
 
 <details>
-<summary> <b>Task 6:</b>The Inverse Adaptive Motion-Sensing Illumination System (IAMIS) uses the VSDSquadron Mini RISC-V Board, an IR sensor, and an LED for motion-based lighting control. The IR sensor detects movement, triggering the LED to blink three times before staying ON. If no motion is detected, the LED turns ON. This system is ideal for home automation, security, offering smart, hands-free lighting control.</summary> 
+<summary> <b>Task 6:</b>The Reverse Motion-Triggered Illumination System (ReMoTIS) uses the VSDSquadron Mini RISC-V Board, an IR sensor, and an LED for motion-based lighting control. The IR sensor detects movement, triggering the LED to blink three times before staying ON. If no motion is detected, the LED turns ON. This system is ideal for home automation, security, offering smart, hands-free lighting control.</summary> 
 <br>
 
 ## Project Implementation  
